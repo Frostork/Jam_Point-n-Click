@@ -510,7 +510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbdc21b8706d7664a811c45bb7aab0b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameStep: 0
+  GameStep: 11
   _backgroundSpriteRenderer: {fileID: 174244944}
   <BackgroundSprite>k__BackingField:
   - {fileID: 21300000, guid: 33b7cacd121ce304c888679b96aacf69, type: 3}

@@ -27,6 +27,8 @@ public class Item : MonoBehaviour, IInteractable
 
     public DontDestroyOnLoad _dontDestroyOnLoad;
 
+    public bool _dool;
+
     private void OnMouseEnter()
     {
         isPointed = true;
@@ -77,15 +79,19 @@ public class Item : MonoBehaviour, IInteractable
     {
         dist = Vector3.Distance(gameObject.transform.position, _playerController.transform.position);
 
-        if (GameStep == FindObjectOfType<DontDestroyOnLoad>().GameStep && canBePicked == true && isPointed == true)
-        {
-            _spriteRenderer.enabled = true;
-        }
-        else
-        {
-            _spriteRenderer.enabled = false;
+        if(_dool == false)
+        {    
+            if (GameStep == FindObjectOfType<DontDestroyOnLoad>().GameStep && canBePicked == true && isPointed == true)
+            {
+                _spriteRenderer.enabled = true;
+            }
+            else
+            {
+                _spriteRenderer.enabled = false;
+            }
         }
     }
+
 
     private void Update()
     {
