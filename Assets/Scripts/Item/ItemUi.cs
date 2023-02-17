@@ -33,6 +33,9 @@ public class ItemUi : MonoBehaviour
             case 4:
                 _dontDestroyOnLoad.haveSkull = true;
                 break;
+            case 5:
+                _dontDestroyOnLoad.CodePanel.SetActive(true);
+                break;
         }
         GameManager.Instance.CanvasInventory.selectedItem = this.gameObject;
     }

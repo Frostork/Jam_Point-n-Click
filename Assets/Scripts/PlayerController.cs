@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            animator.SetBool("Facing", animator.GetBool("Facing"));
+            animator.SetBool("Facing", /*animator.GetBool("Facing")*/ false);
         }
     }
 

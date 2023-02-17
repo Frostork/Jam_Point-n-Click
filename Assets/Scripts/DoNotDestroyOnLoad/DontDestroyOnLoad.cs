@@ -7,12 +7,14 @@ public class DontDestroyOnLoad : MonoBehaviour
     [SerializeField] private SpriteRenderer _backgroundSpriteRenderer;
 
     [field: SerializeField] public List<Sprite> BackgroundSprite { get; private set; }
-    
+
     public bool haveShovel;
     public bool haveEye;
     public bool haveBattery;
     public bool haveSkull;
-    
+
+    public GameObject CodePanel;
+
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
@@ -25,10 +27,14 @@ public class DontDestroyOnLoad : MonoBehaviour
         haveBattery = false;
         haveSkull = false;
     }
-    
+
     private void Update()
     {
-        _backgroundSpriteRenderer.sprite = BackgroundSprite[GameStep];
+        if (GameStep < BackgroundSprite.Count)
+        {
+            _backgroundSpriteRenderer.sprite = BackgroundSprite[GameStep];
+        }
+   
 
         GameObject[] dontdestroyonloadObjects = GameObject.FindGameObjectsWithTag("DDOL");
 

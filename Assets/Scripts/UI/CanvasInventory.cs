@@ -27,7 +27,7 @@ public class CanvasInventory : MonoBehaviour
             GameObject newItem2 = Instantiate(_prefabItem, _panel.transform, false);
             newItem2.GetComponent<ItemUi>().Initialize(item);
             newItem2.GetComponent<Image>().sprite = sprite2;
-            newItem2.GetComponent<ItemUi>().type = type;
+            newItem2.GetComponent<ItemUi>().type = 5;
         }
     }
 }
